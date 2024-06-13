@@ -39,14 +39,14 @@ public class FirstTest {
         given().//Request Specifications
                 baseUri("https://petstore.swagger.io/v2/pet").
                 header("Content-Type", "application/json").
-                pathParam("petId", 1013).
+                pathParam("petId", 1002).
                 log().all().
 
         when().
                 get("/{petId}").
         then(). //Response Specifications
             statusCode(200).
-            body("name",equalTo("Shifu")).
+            body("name",equalTo("Mufasa")).
             body("status",equalTo("alive")).
             log().all();
 
